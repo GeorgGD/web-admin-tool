@@ -1,2 +1,2 @@
-# webAdminTool
+* Web Administration Tool
 A tool for managing personal websites
