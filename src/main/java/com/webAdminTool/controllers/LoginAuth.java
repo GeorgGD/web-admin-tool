@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LoginAuth {
 
-	@RequestMapping(value = "")
+	@RequestMapping("/")
 	public String index() {
-		return "index";
+		return "login";
 	}
 }
