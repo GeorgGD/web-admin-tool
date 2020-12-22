@@ -34,15 +34,15 @@
       <scope>provided</scope>
     </dependency>
 
-    <dependecy>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
-    </dependecy>
+    </dependency>
 
-    <dependecy>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
-    </dependecy>
+    </dependency>
 
     
   </dependencies>
