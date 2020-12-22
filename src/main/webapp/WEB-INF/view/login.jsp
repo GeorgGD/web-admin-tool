@@ -38,16 +38,16 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
-                  <form class="user" action="login" method="post">
+                  <form method="post" class="user" action="/login">
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" path="username" placeholder="Enter Username">
+                      <input id="username" type="text" class="form-control form-control-user" name="username" placeholder="Enter Username">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" path="password" placeholder="Password">
+                      <input id="password" type="password" class="form-control form-control-user" name="password" placeholder="Password">
                     </div>
                     <div class="form-group">
                     </div>
-                    <button class="btn btn-primary btn-user btn-block">
+                    <button type="submit" class="btn btn-primary btn-user btn-block">
                       Login
                     </button>
                     <hr>
