@@ -2,6 +2,7 @@ package com.webAdminTool;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
@@ -15,7 +16,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		auth.inMemoryAuthentication()
 			.withUser("user")
 			.password("password")
-			.roles("admin");
+			.roles("admin");		
+	}
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+	    http.csrf().disable()
+	    	.authorizeRequests()	    	
+	    	.anyRequest().authenticated()
+			.and()
+			.formLogin()
+			.loginPage("/login")
+			.defaultSuccessUrl("/", true)
+			.permitAll();
+			
 	}
 
 	// This is for testing the application
