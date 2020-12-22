@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.webAdminTool</groupId>
   <artifactId>webAdminTool</artifactId>
@@ -28,11 +28,23 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
-	<dependency>
-     <groupId>org.apache.tomcat.embed</groupId>
-     <artifactId>tomcat-embed-jasper</artifactId>
-     <scope>provided</scope>
-  </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependecy>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependecy>
+
+    <dependecy>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependecy>
+
+    
   </dependencies>
 
   <properties>
@@ -43,10 +55,10 @@
     <finalName>webAdminTool</finalName>
 
     <plugins>
-	<plugin>
+      <plugin>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-maven-plugin</artifactId>
-	</plugin>
+      </plugin>
       
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
@@ -58,7 +70,7 @@
 	</configuration>
       </plugin>
     </plugins>
-	
+    
   </build>
   
 </project>
