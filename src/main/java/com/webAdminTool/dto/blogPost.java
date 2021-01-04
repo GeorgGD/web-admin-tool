@@ -48,6 +48,7 @@ public class blogPost {
 		this.date = date;
 	}
 
+	// Creates a row for a table entry
 	public String toString() {
 		return "<tr>"+"<td>"+ID+"</td><td>"+title+"</td><td>"+date+"</td><td class=\"text-center\"><a href=\"edit?id="+ID+"\"><i class=\"fas fa-info-circle text-orange\"></i></a></td>";
 	}		
