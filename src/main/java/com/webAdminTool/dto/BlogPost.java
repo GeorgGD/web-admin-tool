@@ -1,6 +1,6 @@
 package com.webAdminTool.dto;
 
-public class blogPost {
+public class BlogPost {
 
 	private int ID;
 	private String title;
