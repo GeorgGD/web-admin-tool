@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.webAdminTool.dto.BlogPost;
-import com.webAdminTool.dto.blogPost;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
