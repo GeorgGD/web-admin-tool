@@ -32,4 +32,8 @@ public class BlogService {
 	public void updateBlogPost(BlogPost blog) {
 		blogRepo.save(blog);
 	}
+
+	public void deleteBlogPost(Integer id) {
+		blogRepo.deleteById(id);
+	}
 }
