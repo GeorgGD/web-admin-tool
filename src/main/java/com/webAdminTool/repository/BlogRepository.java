@@ -1,5 +1,9 @@
 package com.webAdminTool.repository;
 
-public interface BlogRepository {
+import com.webAdminTool.dto.BlogPost;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface BlogRepository extends CrudRepository <BlogPost, Integer>{
 	
 }
