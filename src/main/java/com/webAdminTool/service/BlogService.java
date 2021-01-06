@@ -24,5 +24,8 @@ public class BlogService {
 	public BlogPost getBlogPost(Integer id) {
 		return blogRepo.findById(id).get();
 	}
-		
+
+	public void createBlogPost(BlogPost blog) {
+		blogRepo.save(blog);
+	}		
 }
