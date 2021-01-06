@@ -1,7 +1,12 @@
 package com.webAdminTool.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class BlogPost {
 
+	@Id	
 	private int ID;
 	private String title;
 	private String short_desc;
