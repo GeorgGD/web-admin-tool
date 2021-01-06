@@ -20,4 +20,9 @@ public class BlogService {
 		blogRepo.findAll().forEach(posts::add);
 		return posts;
 	}
+
+	public BlogPost getBlogPost(Integer id) {
+		return blogRepo.findById(id).get();
+	}
+		
 }
