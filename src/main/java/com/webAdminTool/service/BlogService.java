@@ -27,5 +27,9 @@ public class BlogService {
 
 	public void createBlogPost(BlogPost blog) {
 		blogRepo.save(blog);
-	}		
+	}
+
+	public void updateBlogPost(BlogPost blog) {
+		blogRepo.save(blog);
+	}
 }
