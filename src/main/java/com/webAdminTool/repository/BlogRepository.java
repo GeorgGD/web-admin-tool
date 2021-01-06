@@ -3,9 +3,9 @@ package com.webAdminTool.repository;
 import com.webAdminTool.dto.BlogPost;
 
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public interface BlogRepository extends CrudRepository <BlogPost, Integer>{
 	
 }
