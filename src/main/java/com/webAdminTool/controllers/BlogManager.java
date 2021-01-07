@@ -10,13 +10,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * 
+ * A controller for handling all blog related services
+ * @author Georgios Davakos
+ * @since 2021-01-07
  */
 @Controller
 @RequestMapping("/dashboard")
 public class BlogManager {
 
-	// Some JDBC handler variable
+	// Some JPA handler variable
+	
+	/**
+	 * Sets up the blog manager panel
+	 * @param model The model from the request
+	 * @return The view	
+	 */
 	@RequestMapping("/blog")
 	public String blogManagerPanel(Model model) {
 		// Call server for blog post entries
@@ -28,7 +36,11 @@ public class BlogManager {
 		return "blogManager";
 	}
 
-	// For a given list of blogPosts create an html table in string form
+	/**
+	 * For a given list of blog posts create an html table in string form
+	 * @param blogEntries The blog posts
+	 * @return The table	
+	 */
 	private String createTable(List<BlogPost> blogEntries) {
 		if(blogEntries.size() == 0)
 			return "";
