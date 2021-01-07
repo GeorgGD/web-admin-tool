@@ -2,6 +2,7 @@ package com.webAdminTool.dto;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * Represents a blog post
@@ -9,6 +10,7 @@ import javax.persistence.Id;
  * @since 2021-01-07
  */
 @Entity
+@Table(name="BlogPosts")
 public class BlogPost {
 
 	@Id	
