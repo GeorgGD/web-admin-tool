@@ -1,5 +1,10 @@
 package com.webAdminTool.dto;
 
+/**
+ * Represents a project post
+ * @author Georgios Davakos
+ * @since 2021-01-07
+ */
 public class ProjectPost {
 
 	private int ID;
