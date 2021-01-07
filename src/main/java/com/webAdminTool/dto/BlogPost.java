@@ -3,6 +3,11 @@ package com.webAdminTool.dto;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * Represents a blog post
+ * @author Georgios Davakos
+ * @since 2021-01-07
+ */
 @Entity
 public class BlogPost {
 
