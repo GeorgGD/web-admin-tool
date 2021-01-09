@@ -5,5 +5,5 @@ CREATE TABLE BLOG_POSTS {
        title VARCHAR(250) NOT NULL,
        short_desc VARCHAR(250) NULL,
        blog_post MEDIUMTEXT NULL,
-       post_date DATE NOT NULL
+       post_date VARCHAR(250) NOT NULL
 };
