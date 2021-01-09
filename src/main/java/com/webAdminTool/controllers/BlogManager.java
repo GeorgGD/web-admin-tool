@@ -41,13 +41,13 @@ public class BlogManager {
 	 * @param blogEntries The blog posts
 	 * @return The table	
 	 */
-	private String createTable(List<BlogPost> blogEntries) {
-		if(blogEntries.size() == 0)
-			return "";
-
+	private String createTable(List<BlogPost> blogEntries) {		
 		String tableStart = "<table class=\"table table-bordered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\"><thead><tr><th>ID</th><th>Title</th><th>Date</th><th>Edit</th></tr></thead><tfoot><tr><th>ID</th><th>Title</th><th>Date</th><th>Edit</th></tr></tfoot><tbody>";
 		String tableEnd = "</tbody></table>";
 
+		if(blogEntries.size() == 0)
+			return tableStart + tableEnd;
+		
 		for(BlogPost blogPost : blogEntries) {
 			tableStart = tableStart + blogPost.toString();
 		}
