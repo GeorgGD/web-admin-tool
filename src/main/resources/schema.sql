@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS BLOG_POSTS;
+
+CREATE TABLE BLOG_POSTS {
+       ID INT AUTO_INCREMENT PRIMARY KEY,
+       title VARCHAR(250) NOT NULL,
+       short_desc VARCHAR(250) NULL,
+       blog_post MEDIUMTEXT NULL,
+       post_date DATE NOT NULL
+};
