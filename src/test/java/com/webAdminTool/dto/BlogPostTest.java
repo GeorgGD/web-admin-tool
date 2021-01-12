@@ -26,4 +26,15 @@ public class BlogPostTest {
 		String actualTitle = blog.getTitle();
 		assertEquals(title, actualTitle);
 	}
+
+	@Test
+	public void getSetShort_desc() {
+		String short_desc = "short desc";
+		BlogPost blog = new BlogPost();
+
+		blog.setShort_desc(short_desc);
+		String actualShort_desc = blog.getShort_desc();
+		assertEquals(short_desc, actualShort_desc);
+		
+	}
 }
