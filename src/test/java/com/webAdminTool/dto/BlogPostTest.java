@@ -46,4 +46,14 @@ public class BlogPostTest {
 		String actualBlog_post = blog.getBlog_post();
 		assertEquals(blog_post, actualBlog_post);
 	}
+
+	@Test
+	public void getSetDate() {
+		String date = "21-01-12";
+		BlogPost blog = new BlogPost();
+
+		blog.setPost_Date(date);
+		String actualDate = blog.getPost_Date();
+		assertEquals(date, actualDate);
+	}
 }
