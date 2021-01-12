@@ -11,7 +11,7 @@ public class ProjectPost {
 	private String title;
 	private String short_desc;
 	private String post;
-	private String date;
+	private String post_date;
 
 	public int getID() {
 		return ID;
@@ -45,12 +45,12 @@ public class ProjectPost {
 		this.post = post;
 	}
 
-	public String getDate() {
-		return date;
+	public String getPost_Date() {
+		return post_date;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setPost_Date(String post_date) {
+		this.post_date = post_date;
 	}
 
 	
