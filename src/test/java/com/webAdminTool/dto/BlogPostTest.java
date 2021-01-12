@@ -49,11 +49,11 @@ public class BlogPostTest {
 
 	@Test
 	public void getSetDate() {
-		String date = "21-01-12";
+		String post_date = "21-01-12";
 		BlogPost blog = new BlogPost();
 
-		blog.setPost_Date(date);
+		blog.setPost_Date(post_date);
 		String actualDate = blog.getPost_Date();
-		assertEquals(date, actualDate);
+		assertEquals(post_date, actualDate);
 	}
 }
