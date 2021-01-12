@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.webAdminTool.dto.BlogPost;
+import com.webAdminTool.service.BlogService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +21,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BlogManager {
 
 	// Some JPA handler variable
-	
+	@Autowired
+	BlogService blogService;
+
 	/**
 	 * Sets up the blog manager panel
 	 * @param model The model from the request
