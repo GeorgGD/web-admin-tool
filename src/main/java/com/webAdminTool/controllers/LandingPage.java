@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @Controller
 public class LandingPage {
-	
+
+	/**
+	 * Maps to the main view of the web admin tool
+	 * @return The view	
+	 */
 	@GetMapping("/dashboard")
 	public String index() {
 		return "dashboard";
