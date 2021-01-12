@@ -16,4 +16,14 @@ public class BlogPostTest {
 
 		assertEquals(id, actualId);
 	}
+
+	@Test
+	public void getSetTitle() {
+		String title = "test";
+		BlogPost blog = new BlogPost();
+
+		blog.setTitle(title);
+		String actualTitle = blog.getTitle();
+		assertEquals(title, actualTitle);
+	}
 }
