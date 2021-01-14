@@ -113,15 +113,15 @@
 
               <form:form class="user" action="createPost" modelAttribute="postData" method="post">
                 <div class="form-group row">
-                  <input type="number" class="form-control form-control-user col-5 mx-auto" name="ID" placeholder="ID">
-                  <input type="text" class="form-control form-control-user col-5 mx-auto" name="post_date" placeholder="Date">
+                  <form:input type="number" class="form-control form-control-user col-5 mx-auto" name="ID" placeholder="ID"/>
+                  <form:input type="text" class="form-control form-control-user col-5 mx-auto" name="post_date" placeholder="Date"/>
                 </div>
                 <div class="form-group row">
-                  <input type="text" class="form-control form-control-user col-5 mx-auto" name="title" placeholder="Title">
-                  <input type="text" class="form-control form-control-user col-5 mx-auto" name="short_desc" placeholder="Short Description">
+                  <form:input type="text" class="form-control form-control-user col-5 mx-auto" name="title" placeholder="Title"/>
+                  <form:input type="text" class="form-control form-control-user col-5 mx-auto" name="short_desc" placeholder="Short Description"/>
                 </div>
                 <div class="form-group row">
-                  <textarea name="post" class="form-control mx-5" rows="3" placeholder="Text"></textarea>
+                  <form:textarea name="post" class="form-control mx-5" rows="3" placeholder="Text"/>
                 </div>
                 <div class="container">
                   <button type="submit" class="btn btn-success btn-user btn-block col-4 mx-auto">
