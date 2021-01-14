@@ -17,7 +17,7 @@ public class BlogPost {
 	private int ID;
 	private String title;
 	private String short_desc;
-	private String blog_post;
+	private String post;
 	private String post_date;
 
 	public int getID() {
@@ -44,19 +44,19 @@ public class BlogPost {
 		this.short_desc = short_desc;
 	}
 
-	public String getBlog_post() {
-		return blog_post;
+	public String getPost() {
+		return post;
 	}
 
-	public void setBlog_post(String blog_post) {
-		this.blog_post = blog_post;
+	public void setPost(String post) {
+		this.post = post;
 	}
 
-	public String getPost_Date() {
+	public String getPost_date() {
 		return post_date;
 	}
 
-	public void setPost_Date(String post_date) {
+	public void setPost_date(String post_date) {
 		this.post_date = post_date;
 	}
 
