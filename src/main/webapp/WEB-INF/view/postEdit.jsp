@@ -111,7 +111,7 @@
             </div>
             <div class="card-body">
 
-              <form class="user" action="createPost">
+              <form:form class="user" action="createPost" modelAttribute="postData" method="post">
                 <div class="form-group row">
                   <input type="number" class="form-control form-control-user col-5 mx-auto" name="ID" placeholder="ID">
                   <input type="text" class="form-control form-control-user col-5 mx-auto" name="post_date" placeholder="Date">
@@ -130,7 +130,7 @@
 
                 </div>
                 <hr>
-              </form>
+              </form:form>
 
             </div>
           </div>
