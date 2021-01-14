@@ -9,7 +9,9 @@ import com.webAdminTool.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * A controller for handling all blog related services
@@ -40,6 +42,11 @@ public class BlogManager {
 		return "blogManager";
 	}
 
+	@RequestMapping("/addBlogPost")
+	public String addBlogPost(@ModelAttribute("postData") BlogPost blogPost) {
+		return "postEdit";
+	}
+	
 	/**
 	 * For a given list of blog posts create an html table in string form
 	 * @param blogEntries The blog posts
