@@ -14,4 +14,9 @@ public class PostEditor {
 	@Autowired
 	BlogService blogService;
 
+	@RequestMapping("/createPost")
+	public String createPost() {
+
+		return "blogManager";
+	}
 }
