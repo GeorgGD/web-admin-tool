@@ -29,7 +29,7 @@ public class PostEditor {
 	 */
 	@RequestMapping("/addBlogPost")
 	public String addBlogPost(@ModelAttribute("postData") BlogPost blogPost) {
-					
+		blogPost.setID(nextAvailableID());
 		return "postEdit";
 	}
 	
