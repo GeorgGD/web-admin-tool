@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/blogManager")
+@RequestMapping("/dashboard/blogManager")
 public class PostEditor {
 
 	// Some JPA handler variable
@@ -30,7 +30,7 @@ public class PostEditor {
 	 * Creates a 
 	 */
 	@RequestMapping("/createPost")
-	public String createPost() {
+	public String createPost(@ModelAttribute("postData") BlogPost blogPost) {
 
 		return "blogManager";
 	}
