@@ -32,6 +32,6 @@ public class PostEditor {
 	@RequestMapping("/createPost")
 	public String createPost(@ModelAttribute("postData") BlogPost blogPost) {
 
-		return "blogManager";
+		return "redirect:/dashboard/blogManager";
 	}
 }
