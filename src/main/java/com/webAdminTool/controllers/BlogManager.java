@@ -29,7 +29,7 @@ public class BlogManager {
 	 * @param model The model from the request
 	 * @return The view	
 	 */
-	@RequestMapping("/blog")
+	@RequestMapping("/blogManager")
 	public String blogManagerPanel(Model model) {
 		// Call server for blog post entries
 
