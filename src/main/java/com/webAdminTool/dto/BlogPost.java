@@ -3,6 +3,8 @@ package com.webAdminTool.dto;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 
 /**
  * Represents a blog post
@@ -13,11 +15,15 @@ import javax.persistence.Table;
 @Table(name="BlogPosts")
 public class BlogPost {
 
-	@Id	
-	private int ID;
+	@Id
+	@Positive
+	private int ID;	
+	@NotBlank(message = "Can't be empty!")
 	private String title;
+	@NotBlank(message = "Can't be empty!")
 	private String short_desc;
 	private String post;
+	@NotBlank(message = "Can't be empty!")
 	private String post_date;
 
 	public int getID() {
