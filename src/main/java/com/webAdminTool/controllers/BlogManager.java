@@ -9,7 +9,6 @@ import com.webAdminTool.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -39,16 +38,6 @@ public class BlogManager {
 		String table = createTable(blogEntries);
 		model.addAttribute("table", table);
 		return "blogManager";
-	}
-
-	/**
-	 * Redirects to the blog editor
-	 * @param blogPost The blog post
-	 * @return The view
-	 */
-	@RequestMapping("/addBlogPost")
-	public String addBlogPost(@ModelAttribute("postData") BlogPost blogPost) {
-		return "postEdit";
 	}
 	
 	/**
