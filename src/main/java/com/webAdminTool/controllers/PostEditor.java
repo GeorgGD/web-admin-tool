@@ -1,5 +1,7 @@
 package com.webAdminTool.controllers;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import com.webAdminTool.dto.BlogPost;
@@ -27,6 +29,7 @@ public class PostEditor {
 	 */
 	@RequestMapping("/addBlogPost")
 	public String addBlogPost(@ModelAttribute("postData") BlogPost blogPost) {
+					
 		return "postEdit";
 	}
 	
@@ -37,5 +40,19 @@ public class PostEditor {
 	public String createPost(@Valid @ModelAttribute("postData") BlogPost blogPost, BindingResult result, Model model) {
 		blogService.createBlogPost(blogPost);
 		return "redirect:/dashboard/blogManager";
+	}
+
+	/**
+	 * Provides the next available ID
+	 */
+	private int nextAvailableID() {
+		List<BlogPost> posts = blogService.getAllPosts();
+		if(posts == null || posts.size() == 0)
+			return 1;
+		else {
+			int size = posts.size();
+			int availableID = size + 1;
+			return availableID;
+		}
 	}
 }
