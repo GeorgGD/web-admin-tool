@@ -42,8 +42,8 @@ public class BlogPostTest {
 		String blog_post = "blog post";
 		BlogPost blog = new BlogPost();
 
-		blog.setBlog_post(blog_post);
-		String actualBlog_post = blog.getBlog_post();
+		blog.setPost(blog_post);
+		String actualBlog_post = blog.getPost();
 		assertEquals(blog_post, actualBlog_post);
 	}
 
@@ -52,8 +52,8 @@ public class BlogPostTest {
 		String post_date = "21-01-12";
 		BlogPost blog = new BlogPost();
 
-		blog.setPost_Date(post_date);
-		String actualDate = blog.getPost_Date();
+		blog.setPost_date(post_date);
+		String actualDate = blog.getPost_date();
 		assertEquals(post_date, actualDate);
 	}
 }
