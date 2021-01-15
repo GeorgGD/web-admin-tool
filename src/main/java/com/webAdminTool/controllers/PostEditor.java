@@ -1,10 +1,14 @@
 package com.webAdminTool.controllers;
 
+import javax.validation.Valid;
+
 import com.webAdminTool.dto.BlogPost;
 import com.webAdminTool.service.BlogService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -30,8 +34,8 @@ public class PostEditor {
 	 * Creates a 
 	 */
 	@RequestMapping("/createPost")
-	public String createPost(@ModelAttribute("postData") BlogPost blogPost) {
-
+	public String createPost(@Valid @ModelAttribute("postData") BlogPost blogPost, BindingResult result, Model model) {
+		
 		return "redirect:/dashboard/blogManager";
 	}
 }
