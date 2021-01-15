@@ -41,6 +41,11 @@ public class BlogManager {
 		return "blogManager";
 	}
 
+	/**
+	 * Redirects to the blog editor
+	 * @param blogPost The blog post
+	 * @return The view
+	 */
 	@RequestMapping("/addBlogPost")
 	public String addBlogPost(@ModelAttribute("postData") BlogPost blogPost) {
 		return "postEdit";
