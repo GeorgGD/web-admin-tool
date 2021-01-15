@@ -31,10 +31,7 @@ public class BlogManager {
 	 */
 	@RequestMapping("/blogManager")
 	public String blogManagerPanel(Model model) {
-		// Call server for blog post entries
-
-		// Create a table with all the entries
-		List<BlogPost> blogEntries = new ArrayList<>();
+		List<BlogPost> blogEntries = blogService.getAllPosts();
 		String table = createTable(blogEntries);
 		model.addAttribute("table", table);
 		return "blogManager";
@@ -49,7 +46,7 @@ public class BlogManager {
 		String tableStart = "<table class=\"table table-bordered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\"><thead><tr><th>ID</th><th>Title</th><th>Date</th><th>Edit</th></tr></thead><tfoot><tr><th>ID</th><th>Title</th><th>Date</th><th>Edit</th></tr></tfoot><tbody>";
 		String tableEnd = "</tbody></table>";
 
-		if(blogEntries.size() == 0)
+		if(blogEntries == null || blogEntries.size() == 0)
 			return tableStart + tableEnd;
 		
 		for(BlogPost blogPost : blogEntries) {
