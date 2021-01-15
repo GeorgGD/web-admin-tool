@@ -111,7 +111,7 @@
             <div class="card-body">
               <div class="table-responsive">
                 ${table}
-                <a href="addBlogPost" class="btn btn-success">Add Post</a>
+                <a href="blogManager/addBlogPost" class="btn btn-success">Add Post</a>
               </div>
             </div>
           </div>
