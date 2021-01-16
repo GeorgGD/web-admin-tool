@@ -37,7 +37,10 @@ public class PostEditor {
 	 * Creates a post
 	 */
 	@RequestMapping("/createPost")
-	public String createPost(@Valid @ModelAttribute("postData") BlogPost blogPost, BindingResult result, Model model) {
+	public String createPost(@Valid @ModelAttribute("postData") BlogPost blogPost, BindingResult errors, Model model) {
+		if(errors.hasErrors())
+			return "postEdit";
+		
 		blogService.createBlogPost(blogPost);
 		return "redirect:/dashboard/blogManager";
 	}
