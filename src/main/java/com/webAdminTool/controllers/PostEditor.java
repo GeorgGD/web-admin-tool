@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/dashboard/blogManager")
 public class PostEditor {
 
-	// Some JPA handler variable
 	@Autowired
 	BlogService blogService;
 
