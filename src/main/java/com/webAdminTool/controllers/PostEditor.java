@@ -61,6 +61,15 @@ public class PostEditor {
 		model.addAttribute("postData", blogService.getBlogPost(id));
 		return "postEdit";
 	}
+
+	/**
+	 *
+	 */
+	@RequestMapping("/delete")
+	public String deletePost(@RequestParam("id") int id) {
+		blogService.deleteBlogPost(id);
+		return "blogManager";
+	}
 	
 	/**
 	 * Provides the smallest available ID
