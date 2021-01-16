@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/dashboard/blogManager")
@@ -46,6 +47,12 @@ public class PostEditor {
 		
 		blogService.createBlogPost(blogPost);
 		return "redirect:/dashboard/blogManager";
+	}
+
+	@RequestMapping("/edit")
+	public String editPost(@ModelAttribute("postData") BlogPost blogPost, @RequestParam("id") int id, Model model) {
+		model.addAttribute("postData", blogService.getBlogPost(id));
+		return "postEdit";
 	}
 
 	/**
