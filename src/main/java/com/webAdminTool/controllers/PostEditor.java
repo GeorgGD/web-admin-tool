@@ -22,6 +22,11 @@ public class PostEditor {
 	@Autowired
 	BlogService blogService;
 
+	@RequestMapping("/")
+	public String rootRedirect() {
+		return "redirect:/dashboard/blogManager";
+	}
+	
 	/**
 	 * Redirects to the blog editor
 	 * @param blogPost The blog post
