@@ -68,7 +68,7 @@ public class PostEditor {
 	@RequestMapping("/delete")
 	public String deletePost(@RequestParam("id") int id) {
 		blogService.deleteBlogPost(id);
-		return "blogManager";
+		return "redirect:/dashboard/blogManager";
 	}
 	
 	/**
