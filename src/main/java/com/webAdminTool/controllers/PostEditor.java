@@ -63,7 +63,9 @@ public class PostEditor {
 	}
 
 	/**
-	 *
+	 * Deletes the blog post with the given ID
+	 * @param id The id of the blog post
+	 * @return The view	
 	 */
 	@RequestMapping("/delete")
 	public String deletePost(@RequestParam("id") int id) {
