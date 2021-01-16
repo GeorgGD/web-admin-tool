@@ -49,12 +49,19 @@ public class PostEditor {
 		return "redirect:/dashboard/blogManager";
 	}
 
+	/**
+	 * Edits the given blog post
+	 * @param blogPost The blog post
+	 * @param id The id of the blog post
+	 * @param model The model in the response body
+	 * @return The view	
+	 */	
 	@RequestMapping("/edit")
 	public String editPost(@ModelAttribute("postData") BlogPost blogPost, @RequestParam("id") int id, Model model) {
 		model.addAttribute("postData", blogService.getBlogPost(id));
 		return "postEdit";
 	}
-
+	
 	/**
 	 * Provides the smallest available ID
 	 * @return An available ID	
