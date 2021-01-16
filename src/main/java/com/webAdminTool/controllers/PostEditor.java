@@ -34,10 +34,13 @@ public class PostEditor {
 	}
 	
 	/**
-	 * Creates a post
+	 * Creates a blog post
+	 * @param blogPost The blog post to create
+	 * @param errors Any errors in the blog post
+	 * @return The view	
 	 */
 	@RequestMapping("/createPost")
-	public String createPost(@Valid @ModelAttribute("postData") BlogPost blogPost, BindingResult errors, Model model) {
+	public String createPost(@Valid @ModelAttribute("postData") BlogPost blogPost, BindingResult errors) {
 		if(errors.hasErrors())
 			return "postEdit";
 		
@@ -46,7 +49,8 @@ public class PostEditor {
 	}
 
 	/**
-	 * Provides the next available ID
+	 * Provides the smallest available ID
+	 * @return An available ID	
 	 */
 	private int nextAvailableID() {
 		List<BlogPost> posts = blogService.getAllPosts();
