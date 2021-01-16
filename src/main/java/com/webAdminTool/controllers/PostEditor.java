@@ -22,6 +22,9 @@ public class PostEditor {
 	@Autowired
 	BlogService blogService;
 
+	/**
+	 * Redirects to the root mapping of this controller
+	 */	
 	@RequestMapping("/")
 	public String rootRedirect() {
 		return "redirect:/dashboard/blogManager";
