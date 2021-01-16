@@ -34,7 +34,7 @@ public class PostEditor {
 	}
 	
 	/**
-	 * Creates a 
+	 * Creates a post
 	 */
 	@RequestMapping("/createPost")
 	public String createPost(@Valid @ModelAttribute("postData") BlogPost blogPost, BindingResult result, Model model) {
