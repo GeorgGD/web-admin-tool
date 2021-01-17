@@ -4,6 +4,3 @@ A tool for managing personal websites.
 * Details
 The tool should allow the user to manage blog posts, website data and finally allow for the integration of more features.
 
-* TODOS
-- Documentation
-- Unit tests

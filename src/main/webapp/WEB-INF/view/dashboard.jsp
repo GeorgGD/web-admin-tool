@@ -112,7 +112,7 @@
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Manage The Blog</div>
                     </div>
                     <div class="col-auto">
-                      <a type="submit" name="blog" class="btn btn-primary font-weight-bold" href="dashboard/blog">Get Started</a>
+                      <a type="submit" name="blog" class="btn btn-primary font-weight-bold" href="dashboard/blogManager">Get Started</a>
                     </div>
                   </div>
                 </div>
@@ -130,7 +130,7 @@
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Manage The Projects</div>
                     </div>
                     <div class="col-auto">
-                      <a type="submit" name="projects" class="btn btn-success font-weight-bold" href="dashboard/projects">Get Started</a>
+                      <a type="submit" name="projects" class="btn btn-success font-weight-bold" href="dashboard/projectManager">Get Started</a>
                     </div>
                   </div>
                 </div>

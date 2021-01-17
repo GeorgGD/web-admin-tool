@@ -3,6 +3,8 @@ package com.webAdminTool.dto;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 
 /**
  * Represents a blog post
@@ -13,11 +15,15 @@ import javax.persistence.Table;
 @Table(name="BlogPosts")
 public class BlogPost {
 
-	@Id	
-	private int ID;
+	@Id
+	@Positive
+	private int ID;	
+	@NotBlank(message = "Can't be empty!")
 	private String title;
+	@NotBlank(message = "Can't be empty!")
 	private String short_desc;
-	private String blog_post;
+	private String post;
+	@NotBlank(message = "Can't be empty!")
 	private String post_date;
 
 	public int getID() {
@@ -44,24 +50,24 @@ public class BlogPost {
 		this.short_desc = short_desc;
 	}
 
-	public String getBlog_post() {
-		return blog_post;
+	public String getPost() {
+		return post;
 	}
 
-	public void setBlog_post(String blog_post) {
-		this.blog_post = blog_post;
+	public void setPost(String post) {
+		this.post = post;
 	}
 
-	public String getPost_Date() {
+	public String getPost_date() {
 		return post_date;
 	}
 
-	public void setPost_Date(String post_date) {
+	public void setPost_date(String post_date) {
 		this.post_date = post_date;
 	}
 
 	// Creates a row for a table entry
 	public String toString() {
-		return "<tr>"+"<td>"+ID+"</td><td>"+title+"</td><td>"+post_date+"</td><td class=\"text-center\"><a href=\"edit?id="+ID+"\"><i class=\"fas fa-info-circle text-orange\"></i></a></td>";
+		return "<tr>"+"<td>"+ID+"</td><td>"+title+"</td><td>"+post_date+"</td><td class=\"text-center\"><a href=\"blogManager/edit?id="+ID+"\" class=\"mr-2\"><i class=\"fas fa-info-circle text-orange\"></i></a><a href=\"blogManager/delete?id="+ID+"\" class=\"ml-2\"><i class=\"fas fa-trash text-danger\"></i></a></td>";
 	}		
 }

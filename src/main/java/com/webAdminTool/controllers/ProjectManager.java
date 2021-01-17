@@ -2,59 +2,50 @@ package com.webAdminTool.controllers;
 
 import java.util.List;
 
-import com.webAdminTool.dto.BlogPost;
-import com.webAdminTool.service.BlogService;
+import com.webAdminTool.dto.ProjectPost;
+import com.webAdminTool.service.ProjectService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- * A controller for handling all blog related services
- * @author Georgios Davakos
- * @since 2021-01-07
- */
 @Controller
 @RequestMapping("/dashboard")
-public class BlogManager {
+public class ProjectManager {
 
-	// Some JPA handler variable
 	@Autowired
-	BlogService blogService;
-
-	String ADD_POST = "blogManager/addBlogPost";
+	ProjectService projectService;
+	String ADD_POST = "projectManager/addProjectPost";
 
 	/**
-	 * Sets up the blog manager panel
+	 * Sets up the project manager panel
 	 * @param model The model from the request
 	 * @return The view	
 	 */
-	@RequestMapping("/blogManager")
-	public String blogManagerPanel(Model model) {
-		List<BlogPost> blogEntries = blogService.getAllPosts();
-		String table = createTable(blogEntries);
-
+	@RequestMapping("/projectManager")
+	public String projectManagerPanel(Model model) {
+		List<ProjectPost> projectEntries = projectService.getAllPosts();
+		String table = createTable(projectEntries);
 		model.addAttribute("table", table);
 		model.addAttribute("addPost", ADD_POST);
-		
 		return "blogManager";
 	}
 	
 	/**
-	 * For a given list of blog posts create an html table in string form
-	 * @param blogEntries The blog posts
+	 * For a given list of project posts create an html table in string form
+	 * @param blogEntries The project posts
 	 * @return The table	
 	 */
-	private String createTable(List<BlogPost> blogEntries) {		
+	private String createTable(List<ProjectPost> projectEntries) {		
 		String tableStart = "<table class=\"table table-bordered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\"><thead><tr><th>ID</th><th>Title</th><th>Date</th><th>Edit</th></tr></thead><tfoot><tr><th>ID</th><th>Title</th><th>Date</th><th>Edit</th></tr></tfoot><tbody>";
 		String tableEnd = "</tbody></table>";
 
-		if(blogEntries == null || blogEntries.size() == 0)
+		if(projectEntries == null || projectEntries.size() == 0)
 			return tableStart + tableEnd;
 		
-		for(BlogPost blogPost : blogEntries) {
-			tableStart = tableStart + blogPost.toString();
+		for(ProjectPost projectPost : projectEntries) {
+			tableStart = tableStart + projectPost.toString();
 		}
 		tableStart = tableStart + tableEnd;
 		

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,17 +12,17 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Dashboard</title>
+  <title>Edit</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
 
   <!-- Custom styles for this page -->
-  <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="../../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -34,9 +35,9 @@
     <ul class="navbar-nav bg-gradient-dashboard sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon">
-          <img src="img/Logo-Georg_GD.png" alt="logo" class="logo">
+          <img src="../../img/Logo-Georg_GD.png" alt="logo" class="logo">
         </div>
         <div class="sidebar-brand-text mx-3 text-orange">GeorgGD</div>
       </a>
@@ -46,7 +47,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="dashboard.html">
+        <a class="nav-link" href="/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -96,23 +97,53 @@
       <div id="content">
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container">
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between my-4">
-            <h1 class="h3 mb-0 text-gray-800">Blog Manager</h1>
+            <h1 class="h3 mb-0 text-gray-800">Post Editor</h1>
           </div>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Blog Posts</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Editor</h6>
             </div>
             <div class="card-body">
-              <div class="table-responsive">
-                ${table}
-                <a href="${addPost}" class="btn btn-success">Add Post</a>
-              </div>
+
+              <form:form class="user" action="createPost" modelAttribute="postData" method="post">
+                <div class="form-group row">
+		  <div class="col-5 mx-auto">		
+		  <form:input type="number" class="form-control form-control-user" path="ID" placeholder="ID"/>
+		  <form:errors path="ID"/>
+		  </div>
+		  <div class="col-5 mx-auto">
+                  <form:input type="text" class="form-control form-control-user" path="post_date" placeholder="Date"/>
+		  <form:errors path="post_date"/>
+		  </div>
+</div>
+                <div class="form-group row">
+		<div class="col-5 mx-auto">
+                  <form:input type="text" class="form-control form-control-user" path="title" placeholder="Title"/>
+		  <form:errors path="title"/>
+		  </div>
+		  <div class="col-5 mx-auto">
+                  <form:input type="text" class="form-control form-control-user" path="short_desc" placeholder="Short Description"/>
+		  <form:errors path="short_desc"/>
+		  </div>
+                </div>
+                <div class="form-group row">
+                  <form:textarea path="post" class="form-control mx-5" rows="3" placeholder="Text"/>
+                </div>
+                <div class="container">
+                  <button type="submit" class="btn btn-success btn-user btn-block col-4 mx-auto">
+                    Submit
+                  </button>
+
+                </div>
+                <hr>
+              </form:form>
+
             </div>
           </div>
 
@@ -139,21 +170,21 @@
   <!-- End of Page Wrapper -->
 
   <!-- Bootstrap core JavaScript-->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="../js/sb-admin-2.min.js"></script>
+  <script src="../../js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="../../vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="../../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="../js/demo/datatables-demo.js"></script>
+  <script src="../../js/demo/datatables-demo.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,29 @@
 package com.webAdminTool.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
+
 /**
  * Represents a project post
  * @author Georgios Davakos
- * @since 2021-01-07
+ * @since 2021-01-17
  */
+@Entity
+@Table(name="ProjectPosts")
 public class ProjectPost {
 
-	private int ID;
+	@Id
+	@Positive
+	private int ID;	
+	@NotBlank(message = "Can't be empty!")
 	private String title;
+	@NotBlank(message = "Can't be empty!")
 	private String short_desc;
 	private String post;
+	@NotBlank(message = "Can't be empty!")
 	private String post_date;
 
 	public int getID() {
@@ -45,13 +58,16 @@ public class ProjectPost {
 		this.post = post;
 	}
 
-	public String getPost_Date() {
+	public String getPost_date() {
 		return post_date;
 	}
 
-	public void setPost_Date(String post_date) {
+	public void setPost_date(String post_date) {
 		this.post_date = post_date;
 	}
 
-	
+	// Creates a row for a table entry
+	public String toString() {
+		return "<tr>"+"<td>"+ID+"</td><td>"+title+"</td><td>"+post_date+"</td><td class=\"text-center\"><a href=\"projectManager/edit?id="+ID+"\" class=\"mr-2\"><i class=\"fas fa-info-circle text-orange\"></i></a><a href=\"projectManager/delete?id="+ID+"\" class=\"ml-2\"><i class=\"fas fa-trash text-danger\"></i></a></td>";
+	}
 }
