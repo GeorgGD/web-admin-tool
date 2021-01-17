@@ -16,6 +16,7 @@ public class ProjectManager {
 
 	@Autowired
 	ProjectService projectService;
+	String ADD_POST = "projectManager/addProjectPost";
 
 	/**
 	 * Sets up the project manager panel
@@ -27,6 +28,7 @@ public class ProjectManager {
 		List<ProjectPost> projectEntries = projectService.getAllPosts();
 		String table = createTable(projectEntries);
 		model.addAttribute("table", table);
+		model.addAttribute("addPost", ADD_POST);
 		return "blogManager";
 	}
 	
