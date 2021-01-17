@@ -9,7 +9,7 @@ import javax.validation.constraints.Positive;
 /**
  * Represents a project post
  * @author Georgios Davakos
- * @since 2021-01-07
+ * @since 2021-01-17
  */
 @Entity
 @Table(name="ProjectPosts")
