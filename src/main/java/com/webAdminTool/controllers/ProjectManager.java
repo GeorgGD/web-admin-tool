@@ -31,8 +31,8 @@ public class ProjectManager {
 	}
 	
 	/**
-	 * For a given list of blog posts create an html table in string form
-	 * @param blogEntries The blog posts
+	 * For a given list of project posts create an html table in string form
+	 * @param blogEntries The project posts
 	 * @return The table	
 	 */
 	private String createTable(List<ProjectPost> projectEntries) {		
