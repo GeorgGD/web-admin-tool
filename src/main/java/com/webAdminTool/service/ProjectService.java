@@ -16,8 +16,8 @@ public class ProjectService {
 	private ProjectRepository projectRepo;
 
 	/**
-	 * Retrieves all blog posts
-	 * @return A list with all blog posts	
+	 * Retrieves all project posts
+	 * @return A with list all project posts	
 	 */
 	public List<ProjectPost> getAllPosts() {
 		List<ProjectPost> posts = new ArrayList<>();
@@ -26,33 +26,33 @@ public class ProjectService {
 	}
 
 	/**
-	 * Retrieves a single blog post
-	 * @param id The id of the blog post
-	 * @return The blog post	
+	 * Retrieves a single project post
+	 * @param id The id of the project post
+	 * @return The project post	
 	 */
 	public ProjectPost getProjectPost(Integer id) {
 		return projectRepo.findById(id).get();
 	}
 
 	/**
-	 * Creates a blog post
-	 * @param blog The blog post	
+	 * Creates a project post
+	 * @param project The project post	
 	 */
-	public void createProjectPost(ProjectPost blog) {
-		projectRepo.save(blog);
+	public void createProjectPost(ProjectPost project) {
+		projectRepo.save(project);
 	}
 
 	/**
-	 * Updates a blog post
-	 * @param blog The updated blog post	
+	 * Updates a project post
+	 * @param project The updated project post	
 	 */
-	public void updateProjectPost(ProjectPost blog) {
-		projectRepo.save(blog);
+	public void updateProjectPost(ProjectPost project) {
+		projectRepo.save(project);
 	}
 
 	/**
-	 * Deletes a blog post
-	 * @param id The id of the blog post	
+	 * Deletes a project post
+	 * @param id The id of the project post	
 	 */
 	public void deleteProjectPost(Integer id) {
 		projectRepo.deleteById(id);
