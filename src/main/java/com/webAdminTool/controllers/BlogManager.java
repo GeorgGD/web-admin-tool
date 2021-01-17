@@ -24,6 +24,7 @@ public class BlogManager {
 	BlogService blogService;
 
 	String ADD_POST = "blogManager/addBlogPost";
+
 	/**
 	 * Sets up the blog manager panel
 	 * @param model The model from the request
@@ -33,8 +34,10 @@ public class BlogManager {
 	public String blogManagerPanel(Model model) {
 		List<BlogPost> blogEntries = blogService.getAllPosts();
 		String table = createTable(blogEntries);
+
 		model.addAttribute("table", table);
 		model.addAttribute("addPost", ADD_POST);
+		
 		return "blogManager";
 	}
 	
