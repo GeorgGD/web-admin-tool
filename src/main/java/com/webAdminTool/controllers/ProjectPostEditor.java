@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/dashboard/ProjectManager")
+@RequestMapping("/dashboard/projectManager")
 public class ProjectPostEditor {
 
 	@Autowired
@@ -27,12 +27,12 @@ public class ProjectPostEditor {
 	 */	
 	@RequestMapping("/")
 	public String rootRedirect() {
-		return "redirect:/dashboard/blogManager";
+		return "redirect:/dashboard/projectManager";
 	}
 	
 	/**
-	 * Redirects to the blog editor
-	 * @param projectPost The blog post
+	 * Redirects to the project editor
+	 * @param projectPost The project post
 	 * @return The view
 	 */
 	@RequestMapping("/addProjectPost")
@@ -42,9 +42,9 @@ public class ProjectPostEditor {
 	}
 	
 	/**
-	 * Creates a blog post
-	 * @param projectPost The blog post to create
-	 * @param errors Any errors in the blog post
+	 * Creates a project post
+	 * @param projectPost The project post to create
+	 * @param errors Any errors in the project post
 	 * @return The view	
 	 */
 	@RequestMapping("/createPost")
@@ -53,13 +53,13 @@ public class ProjectPostEditor {
 			return "postEdit";
 		
 		projectService.createProjectPost(projectPost);
-		return "redirect:/dashboard/blogManager";
+		return "redirect:/dashboard/projectManager";
 	}
 
 	/**
-	 * Edits the given blog post
-	 * @param projectPost The blog post
-	 * @param id The id of the blog post
+	 * Edits the given project post
+	 * @param projectPost The project post
+	 * @param id The id of the project post
 	 * @param model The model in the response body
 	 * @return The view	
 	 */	
@@ -70,14 +70,14 @@ public class ProjectPostEditor {
 	}
 
 	/**
-	 * Deletes the blog post with the given ID
-	 * @param id The id of the blog post
+	 * Deletes the project post with the given ID
+	 * @param id The id of the project post
 	 * @return The view	
 	 */
 	@RequestMapping("/delete")
 	public String deletePost(@RequestParam("id") int id) {
 		projectService.deleteProjectPost(id);
-		return "redirect:/dashboard/blogManager";
+		return "redirect:/dashboard/projectManager";
 	}
 	
 	/**
