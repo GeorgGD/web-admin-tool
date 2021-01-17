@@ -66,5 +66,8 @@ public class ProjectPost {
 		this.post_date = post_date;
 	}
 
-	
+	// Creates a row for a table entry
+	public String toString() {
+		return "<tr>"+"<td>"+ID+"</td><td>"+title+"</td><td>"+post_date+"</td><td class=\"text-center\"><a href=\"blogManager/edit?id="+ID+"\" class=\"mr-2\"><i class=\"fas fa-info-circle text-orange\"></i></a><a href=\"blogManager/delete?id="+ID+"\" class=\"ml-2\"><i class=\"fas fa-trash text-danger\"></i></a></td>";
+	}
 }
