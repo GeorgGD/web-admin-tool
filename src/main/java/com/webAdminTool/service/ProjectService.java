@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class ProjectService {
 
 	@Autowired
-	private ProjectRepository blogRepo;
+	private ProjectRepository projectRepo;
 
 	/**
 	 * Retrieves all blog posts
@@ -21,7 +21,7 @@ public class ProjectService {
 	 */
 	public List<ProjectPost> getAllPosts() {
 		List<ProjectPost> posts = new ArrayList<>();
-		blogRepo.findAll().forEach(posts::add);
+		projectRepo.findAll().forEach(posts::add);
 		return posts;
 	}
 
@@ -31,7 +31,7 @@ public class ProjectService {
 	 * @return The blog post	
 	 */
 	public ProjectPost getProjectPost(Integer id) {
-		return blogRepo.findById(id).get();
+		return projectRepo.findById(id).get();
 	}
 
 	/**
@@ -39,7 +39,7 @@ public class ProjectService {
 	 * @param blog The blog post	
 	 */
 	public void createProjectPost(ProjectPost blog) {
-		blogRepo.save(blog);
+		projectRepo.save(blog);
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class ProjectService {
 	 * @param blog The updated blog post	
 	 */
 	public void updateProjectPost(ProjectPost blog) {
-		blogRepo.save(blog);
+		projectRepo.save(blog);
 	}
 
 	/**
@@ -55,6 +55,6 @@ public class ProjectService {
 	 * @param id The id of the blog post	
 	 */
 	public void deleteProjectPost(Integer id) {
-		blogRepo.deleteById(id);
+		projectRepo.deleteById(id);
 	}
 }
