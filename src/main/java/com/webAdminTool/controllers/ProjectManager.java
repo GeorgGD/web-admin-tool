@@ -18,14 +18,14 @@ public class ProjectManager {
 	ProjectService projectService;
 
 	/**
-	 * Sets up the blog manager panel
+	 * Sets up the project manager panel
 	 * @param model The model from the request
 	 * @return The view	
 	 */
 	@RequestMapping("/projectManager")
 	public String projectManagerPanel(Model model) {
-		List<ProjectPost> blogEntries = projectService.getAllPosts();
-		String table = createTable(blogEntries);
+		List<ProjectPost> projectEntries = projectService.getAllPosts();
+		String table = createTable(projectEntries);
 		model.addAttribute("table", table);
 		return "blogManager";
 	}
