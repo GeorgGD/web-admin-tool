@@ -52,8 +52,8 @@ public class ProjectPostTest {
 		String post_date = "21-01-12";
 		ProjectPost project = new ProjectPost();
 
-		project.setPost_Date(post_date);
-		String actualDate = project.getPost_Date();
+		project.setPost_date(post_date);
+		String actualDate = project.getPost_date();
 		assertEquals(post_date, actualDate);
 	}
 }
