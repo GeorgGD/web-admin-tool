@@ -2,6 +2,7 @@ package com.webAdminTool.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * The following controller handles redirection from the dashboard meny
@@ -23,6 +24,7 @@ public class LandingPage {
 	/**
 	 *
 	 */
+	@RequestMapping("/")
 	public String rootRedirect() {
 		return "redirect:/dashboard";
 	}
