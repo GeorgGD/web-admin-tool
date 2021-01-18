@@ -19,4 +19,11 @@ public class LandingPage {
 	public String index() {
 		return "dashboard";
 	}
+
+	/**
+	 *
+	 */
+	public String rootRedirect() {
+		return "redirect:/dashboard";
+	}
 }
