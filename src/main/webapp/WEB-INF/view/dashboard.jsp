@@ -152,7 +152,7 @@
                       </div>
                     </div>
                     <div class="col-auto">
-                      <a type="submit" name="other" class="btn btn-info font-weight-bold" href="dashboard/other">Get Started</a>
+                      <a type="submit" name="other" class="btn btn-info font-weight-bold" href="dashboard">Get Started</a>
                     </div>
                   </div>
                 </div>
