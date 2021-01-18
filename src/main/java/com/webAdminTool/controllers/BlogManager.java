@@ -26,6 +26,15 @@ public class BlogManager {
 	String ADD_POST = "blogManager/addBlogPost";
 	String POSTS = "Blog";
 	String TITLE = "Blog Manager";
+
+	/**
+	 *
+	 */
+	@RequestMapping("/")
+	public String rootRedirect() {
+		return "redirect:/dashboard";
+	}
+	
 	/**
 	 * Sets up the blog manager panel
 	 * @param model The model from the request
