@@ -21,6 +21,8 @@ public class BlogServiceTest {
 	
 	@Test
 	public void createBlogPostTest() {
+		BlogService blogService = new BlogService();
+		blogService.createBlogPost(initPost());
 		
 	}
 }
