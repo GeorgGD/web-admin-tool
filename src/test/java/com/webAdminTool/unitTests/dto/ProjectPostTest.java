@@ -1,6 +1,8 @@
-package com.webAdminTool.dto;
+package com.webAdminTool.unitTests.dto;
 
 import static org.junit.Assert.assertEquals;
+
+import com.webAdminTool.dto.ProjectPost;
 
 import org.junit.Test;
 
