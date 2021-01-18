@@ -34,7 +34,7 @@
     <ul class="navbar-nav bg-gradient-dashboard sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard">
         <div class="sidebar-brand-icon">
           <img src="../img/Logo-Georg_GD.png" alt="logo" class="logo">
         </div>
