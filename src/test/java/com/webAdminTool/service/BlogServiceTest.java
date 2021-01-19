@@ -8,9 +8,17 @@ import com.webAdminTool.dto.BlogPost;
 import com.webAdminTool.service.BlogService;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+@RunWith(SpringRunner.class)
+@DataJpaTest
 public class BlogServiceTest {
 
+	@Autowired
+	BlogService blogService;
 
 	public BlogPost initPost() {
 		BlogPost post = new BlogPost();
@@ -25,7 +33,6 @@ public class BlogServiceTest {
 	
 	@Test
 	public void createBlogPostTest() {
-		BlogService blogService = new BlogService();
 		blogService.createBlogPost(initPost());
 		BlogPost actualPost = blogService.getBlogPost(initPost().getID());
 
@@ -36,7 +43,6 @@ public class BlogServiceTest {
 	@Test
 	public void updateBlogPostTest() {
 		String txt = "New text";
-		BlogService blogService = new BlogService();
 		blogService.createBlogPost(initPost());
 
 		BlogPost expectedPost = blogService.getBlogPost(initPost().getID());
@@ -51,7 +57,6 @@ public class BlogServiceTest {
 	public void getAllPostsTest() {
 		int expectedSize = 2;
 		int expectedID = 20;
-		BlogService blogService = new BlogService();
 		blogService.createBlogPost(initPost());
 		BlogPost secondPost = initPost();
 		secondPost.setID(expectedID);
