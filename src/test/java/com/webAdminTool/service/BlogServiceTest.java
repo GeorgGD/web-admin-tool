@@ -5,16 +5,15 @@ import static org.junit.Assert.assertEquals;
 import java.util.List;
 
 import com.webAdminTool.dto.BlogPost;
-import com.webAdminTool.service.BlogService;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@DataJpaTest
+@SpringBootTest
 public class BlogServiceTest {
 
 	@Autowired
@@ -37,7 +36,9 @@ public class BlogServiceTest {
 		BlogPost actualPost = blogService.getBlogPost(initPost().getID());
 
 		assertEquals(initPost().getShort_desc(), actualPost.getShort_desc());
-		assertEquals(initPost().getPost(), actualPost.getPost());		
+		assertEquals(initPost().getPost(), actualPost.getPost());
+
+		blogService.deleteBlogPost(initPost().getID());
 	}
 
 	@Test
@@ -51,6 +52,8 @@ public class BlogServiceTest {
 
 		BlogPost actualPost = blogService.getBlogPost(initPost().getID());
 		assertEquals(expectedPost.getPost(), actualPost.getPost());
+
+		blogService.deleteBlogPost(initPost().getID());
 	}
 
 	@Test
@@ -64,9 +67,9 @@ public class BlogServiceTest {
 
 
 		List<BlogPost> posts = blogService.getAllPosts();
-
+	    
 		assertEquals(expectedSize, posts.size());
-		assertEquals(expectedID, posts.get(2).getID());
+		assertEquals(expectedID, posts.get(1).getID());
 
 		blogService.deleteBlogPost(1);
 		blogService.deleteBlogPost(20);
