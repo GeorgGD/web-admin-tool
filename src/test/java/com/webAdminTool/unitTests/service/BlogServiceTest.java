@@ -1,5 +1,7 @@
 package com.webAdminTool.unitTests.service;
 
+import static org.junit.Assert.assertEquals;
+
 import com.webAdminTool.dto.BlogPost;
 import com.webAdminTool.service.BlogService;
 
@@ -23,6 +25,9 @@ public class BlogServiceTest {
 	public void createBlogPostTest() {
 		BlogService blogService = new BlogService();
 		blogService.createBlogPost(initPost());
-		
+		BlogPost actualPost = blogService.getBlogPost(initPost().getID());
+
+		assertEquals(initPost().getShort_desc(), actualPost.getShort_desc());
+		assertEquals(initPost().getPost(), actualPost.getPost());		
 	}
 }
