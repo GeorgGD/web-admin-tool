@@ -1,4 +1,4 @@
-package com.webAdminTool.unitTests.controllers;
+package com.webAdminTool.controllers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

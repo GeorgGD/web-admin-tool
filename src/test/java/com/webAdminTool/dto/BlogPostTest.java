@@ -1,4 +1,4 @@
-package com.webAdminTool.unitTests.dto;
+package com.webAdminTool.dto;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,4 +1,4 @@
-package com.webAdminTool.integrationTests.service;
+package com.webAdminTool.service;
 
 import static org.junit.Assert.assertEquals;
 
