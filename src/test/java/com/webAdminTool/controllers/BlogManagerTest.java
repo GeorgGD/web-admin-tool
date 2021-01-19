@@ -3,6 +3,7 @@ package com.webAdminTool.controllers;
 import java.util.HashMap;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,6 +25,11 @@ public class BlogManagerTest {
 	@Before
 	public void setup() {
 		model = new ExtendedModelMap();
-		errors = new MapBindingResult(new HashMap<String, String>(), "dummy");
+		errors = new MapBindingResult(new HashMap<String, String>(), "dummy");	 
+	}
+
+	@Test
+	public void rootRedirectTest() {
+		
 	}
 }
