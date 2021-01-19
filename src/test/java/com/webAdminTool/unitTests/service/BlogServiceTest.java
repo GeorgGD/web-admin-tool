@@ -2,6 +2,8 @@ package com.webAdminTool.unitTests.service;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+
 import com.webAdminTool.dto.BlogPost;
 import com.webAdminTool.service.BlogService;
 
@@ -43,5 +45,29 @@ public class BlogServiceTest {
 
 		BlogPost actualPost = blogService.getBlogPost(initPost().getID());
 		assertEquals(expectedPost.getPost(), actualPost.getPost());
+	}
+
+	@Test
+	public void getAllPostsTest() {
+		int expectedSize = 2;
+		int expectedID = 20;
+		BlogService blogService = new BlogService();
+		blogService.createBlogPost(initPost());
+		BlogPost secondPost = initPost();
+		secondPost.setID(expectedID);
+		blogService.createBlogPost(secondPost);
+
+
+		List<BlogPost> posts = blogService.getAllPosts();
+
+		assertEquals(expectedSize, posts.size());
+		assertEquals(expectedID, posts.get(2).getID());
+
+		blogService.deleteBlogPost(1);
+		blogService.deleteBlogPost(20);
+
+		posts = blogService.getAllPosts();
+		expectedSize = 0;
+		assertEquals(expectedSize, posts.size());
 	}
 }
