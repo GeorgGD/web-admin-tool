@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class BlogServiceTest {
 
 	@Autowired
-	BlogService blogService;
+	private BlogService blogService;
 
 	public BlogPost initPost() {
 		BlogPost post = new BlogPost();

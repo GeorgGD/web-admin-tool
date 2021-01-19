@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class ProjectServiceTest {
 
 	@Autowired
-	ProjectService projectService;
+	private ProjectService projectService;
 
 		public ProjectPost initPost() {
 		ProjectPost post = new ProjectPost();
