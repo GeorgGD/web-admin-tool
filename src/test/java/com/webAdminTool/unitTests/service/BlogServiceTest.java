@@ -30,4 +30,18 @@ public class BlogServiceTest {
 		assertEquals(initPost().getShort_desc(), actualPost.getShort_desc());
 		assertEquals(initPost().getPost(), actualPost.getPost());		
 	}
+
+	@Test
+	public void updateBlogPostTest() {
+		String txt = "New text";
+		BlogService blogService = new BlogService();
+		blogService.createBlogPost(initPost());
+
+		BlogPost expectedPost = blogService.getBlogPost(initPost().getID());
+		expectedPost.setPost(txt);
+		blogService.updateBlogPost(expectedPost);
+
+		BlogPost actualPost = blogService.getBlogPost(initPost().getID());
+		assertEquals(expectedPost.getPost(), actualPost.getPost());
+	}
 }
