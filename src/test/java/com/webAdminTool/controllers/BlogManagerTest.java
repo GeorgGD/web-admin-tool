@@ -1,5 +1,7 @@
 package com.webAdminTool.controllers;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.HashMap;
 
 import org.junit.Before;
@@ -30,6 +32,9 @@ public class BlogManagerTest {
 
 	@Test
 	public void rootRedirectTest() {
+		String expectedString = "redirect:/dashboard";
+		String actualString = blogManager.rootRedirect();
 		
-	}
+		assertEquals(expectedString, actualString);
+	}	
 }
