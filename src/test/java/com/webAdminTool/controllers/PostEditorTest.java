@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
 
+import com.webAdminTool.dto.BlogPost;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,11 +24,19 @@ public class PostEditorTest {
 	private PostEditor postEditor;
 	private Model model;
 	private MapBindingResult errors;
+	private BlogPost post;
 	
 	@Before
 	public void setup() {
 		model = new ExtendedModelMap();
-		errors = new MapBindingResult(new HashMap<String, String>(), "dummy");	 
+		errors = new MapBindingResult(new HashMap<String, String>(), "dummy");
+
+		post = new BlogPost();
+		post.setID(1);
+		post.setTitle("test");
+		post.setShort_desc("A unit test");
+		post.setPost("a short unit test");
+		post.setPost_date("21/01/18");
 	}
 
 	@Test
