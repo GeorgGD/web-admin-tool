@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ProjectPostEditor {
 
 	@Autowired
-	ProjectService projectService;
+	private ProjectService projectService;
 
 	/**
 	 * Redirects to the root mapping of this controller

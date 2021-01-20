@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ProjectManager {
 
 	@Autowired
-	ProjectService projectService;
-	String ADD_POST = "projectManager/addProjectPost";
-	String POSTS = "Project";
-	String TITLE = "Project Manager";
+	private ProjectService projectService;
+	private String ADD_POST = "projectManager/addProjectPost";
+	private String POSTS = "Project";
+	private String TITLE = "Project Manager";
 	
 	/**
 	 * Sets up the project manager panel
