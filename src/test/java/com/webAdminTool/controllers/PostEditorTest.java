@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -19,7 +20,7 @@ import org.springframework.validation.MapBindingResult;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@FixMethodOrder
+@FixMethodOrder(MethodSorters.DEFAULT)
 public class PostEditorTest {
 
 	@Autowired
@@ -47,5 +48,10 @@ public class PostEditorTest {
 		String actualString = postEditor.rootRedirect();
 
 		assertEquals(expectedString, actualString);
+	}
+
+	@Test
+	public void addBlogPostTest() {
+		
 	}
 }
