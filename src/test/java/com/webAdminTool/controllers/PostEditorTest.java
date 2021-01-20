@@ -17,5 +17,15 @@ import org.springframework.validation.MapBindingResult;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PostEditorTest {
+
+	@Autowired
+	private PostEditor postEditor;
+	private Model model;
+	private MapBindingResult errors;
 	
+	@Before
+	public void setup() {
+		model = new ExtendedModelMap();
+		errors = new MapBindingResult(new HashMap<String, String>(), "dummy");	 
+	}
 }
