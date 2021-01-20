@@ -58,12 +58,10 @@ public class PostEditorTest {
 	}
 
 	@Test
-	public void createPostErrorTest() {
-		String expectedView = "postEdit";
-		post.setID(-1);
+	public void createPostTest() {
+		String expectedView = "redirect:/dashboard/blogManager";		
 		String actualView = postEditor.createPost(post, errors);
 
 		assertEquals(expectedView, actualView);
-		assertEquals(1, errors.getErrorCount());
 	}
 }
