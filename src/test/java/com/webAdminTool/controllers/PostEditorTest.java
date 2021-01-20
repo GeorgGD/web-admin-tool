@@ -55,8 +55,6 @@ public class PostEditorTest {
 		String expectedView = "postEdit";
 		String actualView = postEditor.addBlogPost(post);
 		assertEquals(expectedView, actualView);
-
-		postEditor.deletePost(1);
 	}
 
 	@Test
