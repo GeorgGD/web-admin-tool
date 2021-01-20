@@ -73,5 +73,6 @@ public class PostEditorTest {
 		String actualView = postEditor.editPost(post, 1, model);
 
 		assertEquals(expectedView, actualView);
+		postEditor.deletePost(1);
 	}
 }
