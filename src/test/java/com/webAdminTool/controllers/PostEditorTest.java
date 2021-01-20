@@ -28,4 +28,12 @@ public class PostEditorTest {
 		model = new ExtendedModelMap();
 		errors = new MapBindingResult(new HashMap<String, String>(), "dummy");	 
 	}
+
+	@Test
+	public void rootRedirectTest() {
+		String expectedString = "redirect:/dashboard/blogManager";
+		String actualString = postEditor.rootRedirect();
+
+		assertEquals(expectedString, actualString);
+	}
 }
