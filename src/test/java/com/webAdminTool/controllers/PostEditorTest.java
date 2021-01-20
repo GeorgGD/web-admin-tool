@@ -58,4 +58,14 @@ public class PostEditorTest {
 
 		postEditor.deletePost(1);
 	}
+
+	@Test
+	public void createPostErrorTest() {
+		String expectedView = "postEdit";
+		post.setID(-1);
+		String actualView = postEditor.createPost(post, errors);
+
+		assertEquals(expectedView, actualView);
+		assertEquals(1, errors.getErrorCount());
+	}
 }
