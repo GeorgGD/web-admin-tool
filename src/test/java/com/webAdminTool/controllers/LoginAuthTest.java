@@ -2,6 +2,8 @@ package com.webAdminTool.controllers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.webAdminTool.controllers.LoginAuth;
+
 import org.junit.Test;
 
 public class LoginAuthTest {

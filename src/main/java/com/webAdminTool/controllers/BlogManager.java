@@ -21,10 +21,20 @@ public class BlogManager {
 
 	// Some JPA handler variable
 	@Autowired
-	BlogService blogService;
+	private BlogService blogService;
 
-	String ADD_POST = "blogManager/addBlogPost";
+	private String ADD_POST = "blogManager/addBlogPost";
+	private String POSTS = "Blog";
+	private String TITLE = "Blog Manager";
 
+	/**
+	 *
+	 */
+	@RequestMapping("/")
+	public String rootRedirect() {
+		return "redirect:/dashboard";
+	}
+	
 	/**
 	 * Sets up the blog manager panel
 	 * @param model The model from the request
@@ -37,6 +47,8 @@ public class BlogManager {
 
 		model.addAttribute("table", table);
 		model.addAttribute("addPost", ADD_POST);
+		model.addAttribute("posts", POSTS);
+		model.addAttribute("title", TITLE);
 		
 		return "blogManager";
 	}

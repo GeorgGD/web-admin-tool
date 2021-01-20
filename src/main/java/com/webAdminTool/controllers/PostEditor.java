@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class PostEditor {
 
 	@Autowired
-	BlogService blogService;
+	private BlogService blogService;
 
 	/**
 	 * Redirects to the root mapping of this controller

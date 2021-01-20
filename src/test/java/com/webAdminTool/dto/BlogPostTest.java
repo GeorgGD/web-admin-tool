@@ -2,6 +2,8 @@ package com.webAdminTool.dto;
 
 import static org.junit.Assert.assertEquals;
 
+import com.webAdminTool.dto.BlogPost;
+
 import org.junit.Test;
 
 public class BlogPostTest {

@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ProjectManager {
 
 	@Autowired
-	ProjectService projectService;
-	String ADD_POST = "projectManager/addProjectPost";
-
+	private ProjectService projectService;
+	private String ADD_POST = "projectManager/addProjectPost";
+	private String POSTS = "Project";
+	private String TITLE = "Project Manager";
+	
 	/**
 	 * Sets up the project manager panel
 	 * @param model The model from the request
@@ -29,6 +31,8 @@ public class ProjectManager {
 		String table = createTable(projectEntries);
 		model.addAttribute("table", table);
 		model.addAttribute("addPost", ADD_POST);
+		model.addAttribute("posts", POSTS);
+		model.addAttribute("title", TITLE);
 		return "blogManager";
 	}
 	

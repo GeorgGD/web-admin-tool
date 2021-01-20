@@ -1,6 +1,28 @@
 * Web Administration Tool
-A tool for managing personal websites.
+A tool for managing your personal website. The following project makes it possible for you to
+manage a blog or even a proejcts section in your website. You can create, edit and delete posts
+with the help of this tool.
+
+** Dependencies
+The project was made using:
+- Java 11
+- Maven
+- Spring Framework
+- JUnit
+- Apache derby
+- Jasper
 
 * Details
-The tool should allow the user to manage blog posts, website data and finally allow for the integration of more features.
+In order to demo the project just run the main file "WebAdminToolApp" and then use the following
+login information:
 
+- user
+- password
+
+The project put no emphasis on the security of the login authentication as it was outside the 
+scope of the project. So please make sure you harden the spring security when using this project
+for your own use. 
+
+After login in the website should be fairly stright forward to use and interact with. 
+
+Please feel free to provide constructive feedback!

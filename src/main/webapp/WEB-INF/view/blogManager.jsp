@@ -11,7 +11,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Dashboard</title>
+  <title>${title}</title>
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,9 +34,9 @@
     <ul class="navbar-nav bg-gradient-dashboard sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard">
         <div class="sidebar-brand-icon">
-          <img src="img/Logo-Georg_GD.png" alt="logo" class="logo">
+          <img src="../img/Logo-Georg_GD.png" alt="logo" class="logo">
         </div>
         <div class="sidebar-brand-text mx-3 text-orange">GeorgGD</div>
       </a>
@@ -46,7 +46,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="dashboard.html">
+        <a class="nav-link" href="../dashboard">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -100,13 +100,13 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between my-4">
-            <h1 class="h3 mb-0 text-gray-800">Blog Manager</h1>
+            <h1 class="h3 mb-0 text-gray-800">${title}</h1>
           </div>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Blog Posts</h6>
+              <h6 class="m-0 font-weight-bold text-primary">${posts} Posts</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">

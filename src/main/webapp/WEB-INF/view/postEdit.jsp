@@ -35,7 +35,7 @@
     <ul class="navbar-nav bg-gradient-dashboard sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../dashboard">
         <div class="sidebar-brand-icon">
           <img src="../../img/Logo-Georg_GD.png" alt="logo" class="logo">
         </div>
@@ -47,7 +47,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="../../dashboard">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
