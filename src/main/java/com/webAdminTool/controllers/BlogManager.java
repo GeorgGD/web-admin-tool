@@ -21,11 +21,11 @@ public class BlogManager {
 
 	// Some JPA handler variable
 	@Autowired
-	BlogService blogService;
+	private BlogService blogService;
 
-	String ADD_POST = "blogManager/addBlogPost";
-	String POSTS = "Blog";
-	String TITLE = "Blog Manager";
+	private String ADD_POST = "blogManager/addBlogPost";
+	private String POSTS = "Blog";
+	private String TITLE = "Blog Manager";
 
 	/**
 	 *
