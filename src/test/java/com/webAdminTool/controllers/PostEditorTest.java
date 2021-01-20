@@ -63,5 +63,15 @@ public class PostEditorTest {
 		String actualView = postEditor.createPost(post, errors);
 
 		assertEquals(expectedView, actualView);
+		postEditor.deletePost(1);
+	}
+
+	@Test
+	public void editPostTest() {
+		postEditor.createPost(post, errors);
+		String expectedView = "postEdit";
+		String actualView = postEditor.editPost(post, 1, model);
+
+		assertEquals(expectedView, actualView);
 	}
 }
