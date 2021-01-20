@@ -36,5 +36,13 @@ public class BlogManagerTest {
 		String actualString = blogManager.rootRedirect();
 		
 		assertEquals(expectedString, actualString);
-	}	
+	}
+
+	@Test
+	public void blogManagerPanelTest() {
+		String expectedView = "blogManager";
+		String actualView = blogManager.blogManagerPanel(model);
+
+		assertEquals(expectedView, actualView);
+	}
 }
