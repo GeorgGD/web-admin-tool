@@ -44,5 +44,25 @@ public class BlogManagerTest {
 		String actualView = blogManager.blogManagerPanel(model);
 
 		assertEquals(expectedView, actualView);
+
+		String expectedTable = "<table class=\"table table-bordered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\"><thead><tr><th>ID</th><th>Title</th><th>Date</th><th>Edit</th></tr></thead><tfoot><tr><th>ID</th><th>Title</th><th>Date</th><th>Edit</th></tr></tfoot><tbody></tbody></table>";
+		String actualTable = (String) model.getAttribute("table");
+
+		assertEquals(expectedTable, actualTable);
+
+		String expectedAddPost = "blogManager/addBlogPost";
+		String actualAddPost = (String) model.getAttribute("addPost");
+		
+		assertEquals(expectedAddPost, actualAddPost);
+
+		String expectedPosts = "Blog";
+		String actualPosts = (String) model.getAttribute("posts");
+
+		assertEquals(expectedPosts, actualPosts);
+
+		String expectedTitle = "Blog Manager";
+		String actualTitle = (String) model.getAttribute("title");
+
+		assertEquals(expectedTitle, actualTitle);
 	}
 }
