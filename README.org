@@ -25,4 +25,9 @@ for your own use.
 The demo runs on a local database setup by apache derby, so nothing is stored permanently in your
 demo run. After login the website should be fairly straight forward to use and interact with. 
 
+** Final words
+After having to manually manage my own websites content I ended up doing what a developer does best,
+being lazy, so I created this webapp. This particular version is intended for demo purposes, which is 
+why the frontend is using a bootstrap 4 template with minor modifications.  
+
 Please feel free to provide constructive feedback!
