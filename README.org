@@ -1,29 +1,39 @@
 * Web Administration Tool
-A tool for managing the contents of your website. The following project makes it possible for you to
-manage a blog, a project section or any other form of content. 
+An web-application for managing the contents of your website.  
+The content could be blog posts, a project section or any other form of content. 
 
-** Dependencies
+* Table of Contents
+- General info
+- Technologies
+- Launch
+- Example of use
+- Other information
+* General Info 
+  The following application is a content management tool meant to manage the contents of a website.
+  With this application it's possible to manage an entire blog section, project section and much more. 
+  I would also like to point out that I made this application simple because I needed it 
+  for my personal website which is currently using it.
+* Technologies
 The project was made using:
 - Java 11
-- Maven
-- Spring Framework
-- JUnit
+- Maven 3.6.3
+- Spring Framework 
+  - Spring Boot 2.3.6
+  - Spring Security 
+  - Spring JPA
+- JUnit 4
 - Apache derby
 - Jasper
 
-* Demo
-In order to demo the project just run the main file "WebAdminToolApp" and then use the following
-login information:
+* Launch
+In order to run the application you will be required to have Maven and Java 11 installed.
 
-- user
-- password
-
-No emphasis was put on the security of the login authentication as it was outside the 
-scope of the project. So please make sure you harden the spring security when using this project
-for your own use. 
-
-The demo runs on a local database setup by apache derby, so nothing is stored permanently in your
-demo run. After login the website should be fairly straight forward to use and interact with. 
+1. Open your terminal and compile the application by typing "mvn clean package".
+2. If the message that maven provides at the end is "BUILD SUCCESS" then
+you can proceed to run the application by typing "java -jar target/webAdminTool.war".
+3. Ones the application is up and running open your favorite browser and type "localhost:8080".
+4. Finally login by typing "user" for the username and "password" for the password.
+5. To turn off the application select the terminal running the application and press CTRL + C.   
 
 ** Final words
 After having to manually manage my own websites content I ended up doing what a developer does best,
@@ -31,3 +41,18 @@ being lazy, so I created this webapp. This particular version is intended for de
 why the project has primarily a lot of frontend compontents taken from a bootstrap 4 template.  
 
 Please feel free to provide constructive feedback!
+
+* Example of Use
+  The landing page.
+  [[img/loginPage.png]]
+
+  Once you have logged in.
+  [[img/dashboardPage.png]]
+
+  The Project section without any content.
+  [[img/projectNoContent.png]]
+
+  With content.
+  [[img/projectWithContent.png]]
+
+* Other Information
