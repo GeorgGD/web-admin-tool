@@ -30,7 +30,7 @@ In order to run the application you will be required to have Maven and Java 11 i
 
 1. Open your terminal and compile the application by typing "mvn clean package".
 2. If the message that maven provides at the end is "BUILD SUCCESS" then
-you can proceed to run the application by typing "java -jar target/webAdminTool.war".
+  you can proceed to run the application by typing "java -jar target/webAdminTool.war".
 3. Ones the application is up and running open your favorite browser and type "localhost:8080".
 4. Finally login by typing "user" for the username and "password" for the password.
 5. To turn off the application select the terminal running the application and press CTRL + C.   
